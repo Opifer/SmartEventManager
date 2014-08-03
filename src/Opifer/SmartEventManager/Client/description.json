@@ -1,0 +1,67 @@
+{
+    "name": "SmartEventManager",
+    "apiVersion": "API 8.1.13",
+    "description": "API for using the Voorraedt Smart Event Manager",
+    "operations": {
+        "logOff": {
+            "httpMethod": "GET",
+            "uri": "/Api/Account/LogOff",
+            "summary": "Responds to GET requests of the authenticated user.",
+            "responseType": "class"
+        }, "logOn": {
+            "httpMethod": "POST",
+            "uri": "/Api/Account/LogOn",
+            "summary": "Responds to POST requests to authenticate the user.",
+            "responseType": "class",
+            "responseClass": "Opifer\\SmartEventManager\\Account\\Model\\LogOnResponse",
+            "additionalParameters" : {
+                "location": "json" 
+            }
+        }, "getCompanies": {
+            "httpMethod": "POST",
+            "uri": "/Api/General/GetCompanies",
+            "summary": "Responds to GET requests to get the companies.",
+            "responseType": "class",
+            "responseClass": "Opifer\\SmartEventManager\\General\\Model\\GetCompaniesResponse",
+            "additionalParameters" : {
+                "location": "json" 
+            }
+        }, "addRelation": {
+            "httpMethod": "POST",
+            "uri": "/Api/Relations/AddRelation",
+            "summary": "Responds to POST requests to add a relation.",
+            "responseType": "class",
+            "responseClass": "Opifer\\SmartEventManager\\Relations\\Model\\AddRelationResponse",
+            "additionalParameters" : {
+                "location": "json" 
+            }
+        }, "addReservation": {
+            "httpMethod": "POST",
+            "uri": "/Api/Reservations/AddReservation",
+            "summary": "Responds to POST-requests for adding a reservation.",
+            "responseType": "class",
+            "responseClass": "Opifer\\SmartEventManager\\Reservations\\Model\\AddReservationResponse",
+            "additionalParameters" : {
+                "location": "json" 
+            }
+        }, "getStandardProducts": {
+            "httpMethod": "GET",
+            "uri": "/Api/StandardProducts/GetStandardProducts",
+            "summary": "Responds to GET requests to get the standard products.",
+            "responseType": "class",
+            "responseClass": "Opifer\\SmartEventManager\\StandardProducts\\Model\\GetStandardProductsResponse",
+            "additionalParameters" : {
+                "location": "json" 
+            }
+        }, "getStandardReservations": {
+            "httpMethod": "GET",
+            "uri": "/Api/StandardReservations/GetStandardReservations",
+            "summary": "Responds to GET requests to get the standard reservations.",
+            "responseType": "class",
+            "responseClass": "Opifer\\SmartEventManager\\StandardReservations\\Model\\GetStandardReservationsResponse",
+            "additionalParameters" : {
+                "location": "json" 
+            }
+        }
+    }
+}
