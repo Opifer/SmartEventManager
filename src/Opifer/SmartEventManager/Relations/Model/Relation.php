@@ -160,6 +160,7 @@ class Relation
     
     /**
      * PriceGroupID applicable to the relation
+     * 
      * @var int
      */
     public $PriceGroupID;

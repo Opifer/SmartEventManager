@@ -1,6 +1,6 @@
-# SmartEventManager PHP API client
+# SmartEventManager API PHP client
 
-The SmartEventManager PHP API client enables PHP developers to use SmartEventManager API in their PHP code. The client is written on SEM API version 8.1.13, but other versions should probably work.
+The SmartEventManager API PHP client enables PHP developers to use SmartEventManager API in their PHP code. The client is written on SEM API version 8.1.13, but other versions should probably work.
 All the current implemented API functionality is described in the description.json, for expanding the client functionality this is also the place to get starting.
 
 ## Prerequisites
@@ -36,14 +36,22 @@ require 'vendor/autoload.php';
 
 use Opifer\SmartEventManager\Client\Config;
 use Opifer\SmartEventManager\Client\Client;
+use Guzzle\Http\Exception\BadResponseException;
+use Guzzle\Http\Exception\CurlException;
 
 $config = new Config();
 $config->setBaseUrl('https://myapihost.dev')
     ->setUserName('user')
-    ->setPassword('password');;
+    ->setPassword('password');
+    //->setDebug(); // Show Guzzle request & response (headers + body)
 
-// Instantiate the client
-$client = Client::getInstance($config);
-$companies = $client->getCompanies();
+try {
+    $client = Client::getInstance($config);
+    $companies = $client->getCompanies();
+} catch (CurlException $e) {
+    print "Error CurlException: " . $e->getMessage() . "\n";
+} catch (BadResponseException $e) {
+    print "Error BadResponseException: " . $e->getMessage() . "\n";
+}
 
 ```

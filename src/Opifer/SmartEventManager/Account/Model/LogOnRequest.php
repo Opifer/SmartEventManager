@@ -3,9 +3,6 @@ namespace Opifer\SmartEventManager\Account\Model;
 
 use Opifer\SmartEventManager\Request\Model\BaseRequest;
 
-/**
- * Represents the data that can be passed by a request to the LogOn action of the AccountClient.
- */
 class LogOnRequest extends BaseRequest
 {
     

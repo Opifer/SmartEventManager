@@ -21,7 +21,7 @@ class Action
     /**
      * The start date and time of the action.
      * 
-     * @var string
+     * @var \DateTime
      */
     public $StartDateTime;
     

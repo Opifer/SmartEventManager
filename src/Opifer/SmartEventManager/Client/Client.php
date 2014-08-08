@@ -26,6 +26,7 @@ class Client
     
     /**
      * 
+     * @var \Guzzle\Service\Client
      */
     private $client;
     
@@ -42,7 +43,7 @@ class Client
      * Construct the singleton Client instance
      * And LogOn to the webClient
      */
-    private function __construct(Config $config = null) 
+    private function __construct(Config $config) 
     {
         $this->config = $config;
         $this->setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -114,7 +115,7 @@ class Client
      * Magic method used to pass a command to the Guzzle Service Client
      *
      * @param string $method Name of the command object to instantiate
-     * @param array  $args   Arguments to pass to the command
+     * @param array $args Arguments to pass to the command
      *
      * @return mixed
      */

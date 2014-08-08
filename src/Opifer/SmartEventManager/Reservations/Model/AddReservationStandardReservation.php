@@ -39,11 +39,4 @@ class AddReservationStandardReservation
      */
     public $StartDateTime;
     
-    /**
-     * @FIXME NO DOCS!!!
-     * 
-     * @var \Opifer\SmartEventManager\Reservations\Model\AddReservationOptionalProduct[]
-     */
-    public $AddReservationOptionalProducts;
-    
 }

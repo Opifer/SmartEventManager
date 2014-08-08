@@ -77,7 +77,7 @@ class Config
         return $this;
     }
 
-     /**
+    /**
      * 
      * @param string $userName
      * @return \Opifer\SmartEventManager\Client\Config
@@ -88,7 +88,7 @@ class Config
         return $this;
     }
 
-     /**
+    /**
      * 
      * @param string $password
      * @return \Opifer\SmartEventManager\Client\Config
@@ -99,7 +99,7 @@ class Config
         return $this;
     }
     
-     /**
+    /**
      * 
      * @param bool $debug
      * @return \Opifer\SmartEventManager\Client\Config
