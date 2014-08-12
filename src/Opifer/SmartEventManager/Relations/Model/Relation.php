@@ -21,7 +21,7 @@ class Relation
     /**
      * The day of birth.
      * 
-     * @var string
+     * @var \DateTime
      */
     public $DateOfBirth;
     

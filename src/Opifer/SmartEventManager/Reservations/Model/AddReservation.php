@@ -10,14 +10,7 @@ class AddReservation
      * @var \Opifer\SmartEventManager\Reservations\Model\AddReservationCoding[]
      */
     public $AddReservationCodings;
-    
-    /**
-     * Represents the optional product data to be added.
-     * 
-     * @var \Opifer\SmartEventManager\Reservations\Model\AddReservationOptionalProduct[]
-     */
-    public $AddReservationOptionalProducts;
-    
+
     /**
      * Represents the product data to be added.
      * 
@@ -104,14 +97,27 @@ class AddReservation
     
     /**
      * 
-     * @param \Opifer\SmartEventManager\Reservations\Model\AddReservationOptionalProduct $AddReservationOptionalProduct
+     * @param \Opifer\SmartEventManager\Reservations\Model\AddReservationProduct $AddReservationProduct
      */
-    public function addRelationAction(AddReservationOptionalProduct $AddReservationOptionalProduct)
+    public function addReservationProduct(AddReservationProduct $AddReservationProduct)
     {
-        if (!is_array($this->AddReservationOptionalProducts))
-            $this->AddReservationOptionalProducts = array();
+        if (!is_array($this->AddReservationProducts))
+            $this->AddReservationProducts = array();
         
-        array_push($this->AddReservationOptionalProducts, $AddReservationOptionalProduct);
+        array_push($this->AddReservationProducts, $AddReservationProduct);
     }
+    
+    /**
+     * 
+     * @param \Opifer\SmartEventManager\Reservations\Model\AddReservationStandardReservation $AddReservationStandardReservation
+     */
+    public function addReservationStandardReservation(AddReservationStandardReservation $AddReservationStandardReservation)
+    {
+        if (!is_array($this->AddReservationStandardReservations))
+            $this->AddReservationStandardReservations = array();
+        
+        array_push($this->AddReservationStandardReservations, $AddReservationStandardReservation);
+    }
+    
     
 }

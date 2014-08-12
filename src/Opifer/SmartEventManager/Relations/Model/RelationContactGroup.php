@@ -21,7 +21,7 @@ class RelationContactGroup
     /**
      * Start date of the relation's contact group membership.
      * 
-     * @var string 
+     * @var \DateTime 
      */
     public $StartDate;
     

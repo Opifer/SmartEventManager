@@ -1,11 +1,11 @@
 # SmartEventManager API PHP client
 
-The SmartEventManager API PHP client enables PHP developers to use SmartEventManager API in their PHP code. The client is written on SEM API version 8.1.13, but other versions should probably work.
+The SmartEventManager API PHP client enables PHP developers to use SmartEventManager API in their PHP code. The client is written on SEM API version 8.1.16, but other versions should probably work.
 All the current implemented API functionality is described in the description.json, for expanding the client functionality this is also the place to get starting.
 
 ## Prerequisites
 
-   * SmartEventManager API version 8.1.13 or above
+   * SmartEventManager API version 8.1.16 or above
    * PHP 5.3 or above
    * curl, json extensions must be enabled
    * composer for fetching dependencies (See http://getcomposer.org)

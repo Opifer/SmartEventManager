@@ -5,38 +5,24 @@ class StandardReservationProgramGroup
 {
     
     /**
-     * The name of the standard reservation.
+     * The name of the standard reservation program group.
      * 
      * @var string
      */
     public $Name;
     
     /**
-     * The StandardReservationID of the standard reservation.
+     * The StandardReservationID this standard reservation program belongs to.
      * 
      * @var int
      */
     public $StandardReservationID;
     
     /**
-     * Represents the standard reservation's optional products data.
+     * The StandardReservationProgramGroupID of the standard reservation program group.
      * 
-     * @var \Opifer\SmartEventManager\StandardReservations\Model\StandardReservationOptionalProduct[]
+     * @var int
      */
-    public $StandardReservationOptionalProducts;
-    
-    /**
-     * Represents the standard reservation program group data.
-     * 
-     * @var \Opifer\SmartEventManager\StandardReservations\Model\StandardReservationProgramGroup[]
-     */
-    public $StandardReservationProgramGroups;
-    
-    /**
-     * Represents the standard reservation program data.
-     * 
-     * @var \Opifer\SmartEventManager\StandardReservations\Model\StandardReservationProgram[]
-     */
-    public $StandardReservationPrograms;
+    public $StandardReservationProgramGroupID;
     
 }

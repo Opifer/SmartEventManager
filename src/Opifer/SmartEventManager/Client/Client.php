@@ -19,12 +19,14 @@ class Client
     private static $instance = null; 
    
     /**
-     *
+     * Client config parameter bag
+     * 
      * @var \Opifer\SmartEventManager\Client\Config
      */
     private $config = null;
     
     /**
+     * The Guzzle HTTP Client executing commands on a web service
      * 
      * @var \Guzzle\Service\Client
      */
@@ -42,6 +44,8 @@ class Client
     /**
      * Construct the singleton Client instance
      * And LogOn to the webClient
+     * 
+     * @param \Opifer\SmartEventManager\Client\Config $config
      */
     private function __construct(Config $config) 
     {
@@ -54,6 +58,8 @@ class Client
     
     /**
      * Return the singleton Client instance
+     * 
+     * @param \Opifer\SmartEventManager\Client\Config $config
      * 
      * @return \Opifer\SmartEventManager\Client
      */

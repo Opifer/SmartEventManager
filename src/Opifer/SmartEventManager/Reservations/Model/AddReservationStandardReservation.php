@@ -5,6 +5,13 @@ class AddReservationStandardReservation
 {
     
     /**
+     * Represents the optional product data to be added.
+     * 
+     * @var \Opifer\SmartEventManager\Reservations\Model\AddReservationOptionalProduct[]
+     */
+    public $AddReservationOptionalProducts;
+    
+    /**
      * The end date and time
      * 
      * @var \DateTime
@@ -38,5 +45,19 @@ class AddReservationStandardReservation
      * @var \DateTime
      */
     public $StartDateTime;
+    
+    
+    
+    /**
+     * 
+     * @param \Opifer\SmartEventManager\Reservations\Model\AddReservationOptionalProduct $AddReservationOptionalProduct
+     */
+    public function addRelationAction(AddReservationOptionalProduct $AddReservationOptionalProduct)
+    {
+        if (!is_array($this->AddReservationOptionalProducts))
+            $this->AddReservationOptionalProducts = array();
+        
+        array_push($this->AddReservationOptionalProducts, $AddReservationOptionalProduct);
+    }
     
 }

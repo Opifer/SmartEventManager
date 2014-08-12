@@ -12,13 +12,6 @@ class ContactPerson
     public $DateOfBirth;
     
     /**
-     * The salutation.
-     * 
-     * @var string
-     */
-    public $Dear;
-    
-    /**
      * The department this relation works for.
      * 
      * @var string
@@ -26,25 +19,11 @@ class ContactPerson
     public $Department;
     
     /**
-     * The display Name.
+     * The default email address of the contact person.
      * 
      * @var string
      */
-    public $DisplayName;
-    
-    /**
-     * The long display Name.
-     * 
-     * @var string
-     */
-    public $DisplayNameLong;
-    
-    /**
-     * The short display Name.
-     * 
-     * @var string
-     */
-    public $DisplayNameShort;
+    public $EmailAddress;
     
     /**
      * The email addresses.
@@ -89,11 +68,11 @@ class ContactPerson
     public $LastName;
     
     /**
-     * The Notes.
+     * The default phone number of the contact person.
      * 
      * @var string
      */
-    public $Notes;
+    public $PhoneNumber;
     
     /**
      * The phone numbers.
