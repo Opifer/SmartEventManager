@@ -18,6 +18,6 @@
         "psr-0": { 
             "Opifer\\SmartEventManager": "src/" 
         },
-        "files": ["vendor/opifer/smarteventmanager/manload.php"]
+        "files": ["manload.php"]
     }
 }
