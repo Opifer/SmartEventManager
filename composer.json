@@ -12,11 +12,12 @@
     ],
     "require": {
         "guzzle/guzzle": "~3.9",
-        "netresearch/jsonmapper": "0.*"
+        "jms/serializer": "0.*"
     },
     "autoload": {
         "psr-0": { 
             "Opifer\\SmartEventManager": "src/" 
-        }
+        },
+        "files": ["vendor/opifer/smarteventmanager/manload.php"]
     }
 }

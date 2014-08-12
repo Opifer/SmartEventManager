@@ -1,6 +1,8 @@
 <?php
 namespace Opifer\SmartEventManager\StandardProducts\Model;
 
+use JMS\Serializer\Annotation as JMS;
+
 class StandardProduct
 {
     
@@ -8,6 +10,7 @@ class StandardProduct
      * The name displayed on external documents.
      * 
      * @var string
+     * @JMS\Type("string")
      */
     public $ExternalName;
     
@@ -15,6 +18,7 @@ class StandardProduct
      * The name of the standard product.
      * 
      * @var string
+     * @JMS\Type("string")
      */
     public $Name;
     
@@ -22,6 +26,7 @@ class StandardProduct
      * The StandardProductID of the standard product.
      * 
      * @var int
+     * @JMS\Type("integer")
      */
     public $StandardProductID;
 

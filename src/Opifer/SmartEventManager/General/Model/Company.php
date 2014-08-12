@@ -1,6 +1,8 @@
 <?php
 namespace Opifer\SmartEventManager\General\Model;
 
+use JMS\Serializer\Annotation as JMS;
+
 class Company
 {
     
@@ -8,6 +10,7 @@ class Company
      * The CompanyID of the company.
      * 
      * @var int
+     * @JMS\Type("integer")
      */
     public $CompanyID;
     
@@ -15,6 +18,7 @@ class Company
      * The name of the company.
      * 
      * @var string
+     * @JMS\Type("string")
      */
     public $Name;
 

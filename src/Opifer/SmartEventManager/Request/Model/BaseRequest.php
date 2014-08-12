@@ -10,10 +10,24 @@ class BaseRequest
      * @var string 
      */
     public $CorrelationID;
+
     
+    
+    /**
+     * Serialize a request model object to a json string
+     *
+     * @return string
+     */
     public function jsonSerialize() 
     {
-        return json_decode(json_encode($this), true);
+        $serializer = \JMS\Serializer\SerializerBuilder::create()
+            ->setPropertyNamingStrategy(
+                new \JMS\Serializer\Naming\SerializedNameAnnotationStrategy(
+                    new \JMS\Serializer\Naming\IdenticalPropertyNamingStrategy()))
+            ->build();
+        $json = $serializer->serialize($this, 'json');      
+        
+        return json_decode($json, true);
     }
     
 }

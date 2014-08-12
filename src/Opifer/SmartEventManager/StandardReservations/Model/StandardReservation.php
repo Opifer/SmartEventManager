@@ -1,6 +1,8 @@
 <?php
 namespace Opifer\SmartEventManager\StandardReservations\Model;
 
+use JMS\Serializer\Annotation as JMS;
+
 class StandardReservation
 {
     
@@ -8,6 +10,7 @@ class StandardReservation
      * The name of the standard reservation.
      * 
      * @var string
+     * @JMS\Type("string")
      */
     public $Name;
     
@@ -15,6 +18,7 @@ class StandardReservation
      * The StandardReservationID of the standard reservation.
      * 
      * @var int
+     * @JMS\Type("integer")
      */
     public $StandardReservationID;
     
@@ -22,6 +26,7 @@ class StandardReservation
      * Represents the standard reservation's optional products data.
      * 
      * @var \Opifer\SmartEventManager\StandardReservations\Model\StandardReservationOptionalProduct[]
+     * @JMS\Type("array<Opifer\SmartEventManager\StandardReservations\Model\StandardReservationOptionalProduct>")
      */
     public $StandardReservationOptionalProducts;
     
@@ -29,6 +34,7 @@ class StandardReservation
      * Represents the standard reservation program group data.
      * 
      * @var \Opifer\SmartEventManager\StandardReservations\Model\StandardReservationProgramGroup[]
+     * @JMS\Type("array<Opifer\SmartEventManager\StandardReservations\Model\StandardReservationProgramGroup>")
      */
     public $StandardReservationProgramGroups;
     
@@ -36,6 +42,7 @@ class StandardReservation
      * Represents the standard reservation program data.
      * 
      * @var \Opifer\SmartEventManager\StandardReservations\Model\StandardReservationProgram[]
+     * @JMS\Type("array<Opifer\SmartEventManager\StandardReservations\Model\StandardReservationProgram>")
      */
     public $StandardReservationPrograms;
     
