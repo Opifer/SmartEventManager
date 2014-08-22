@@ -26,6 +26,15 @@
             "additionalParameters" : {
                 "location": "json" 
             }
+        }, "getContactGroups": {
+            "httpMethod": "POST",
+            "uri": "/Api/Relations/GetContactGroups",
+            "summary": "Responds to POST requests to get the contact groups.",
+            "responseType": "class",
+            "responseClass": "Opifer\\SmartEventManager\\Relations\\Model\\GetContactGroupsResponse",
+            "additionalParameters" : {
+                "location": "json" 
+            }
         }, "addRelation": {
             "httpMethod": "POST",
             "uri": "/Api/Relations/AddRelation",
