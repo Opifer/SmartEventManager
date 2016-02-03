@@ -5,7 +5,7 @@ All the current implemented API functionality is described in the description.js
 
 ## Prerequisites
 
-   * SmartEventManager API version 8.1.16 or above
+   * [SmartEventManager API](http://www.voorraedt.nl/docs/api/) version 8.1.16 or above
    * PHP 5.3 or above
    * curl, json extensions must be enabled
    * composer for fetching dependencies (See http://getcomposer.org)
