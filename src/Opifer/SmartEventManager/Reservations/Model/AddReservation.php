@@ -1,27 +1,27 @@
 <?php
+
 namespace Opifer\SmartEventManager\Reservations\Model;
 
 class AddReservation
 {
-    
     /**
      * Represents the reservation codings data.
      * 
-     * @var \Opifer\SmartEventManager\Reservations\Model\AddReservationCoding[]
+     * @var AddReservationCoding[]
      */
     public $AddReservationCodings;
 
     /**
      * Represents the product data to be added.
      * 
-     * @var \Opifer\SmartEventManager\Reservations\Model\AddReservationProduct[]
+     * @var AddReservationProduct[]
      */
     public $AddReservationProducts;
     
     /**
      * Represents the standard reservation data to be applied.
      * 
-     * @var \Opifer\SmartEventManager\Reservations\Model\AddReservationStandardReservation[]
+     * @var AddReservationStandardReservation[]
      */
     public $AddReservationStandardReservations;
     
@@ -75,49 +75,55 @@ class AddReservation
     public $ReservationDate;
     
     /**
+     * Optional. Overrides the default ReservationStatusID when set.
+     *
+     * @var int
+     */
+    public $ReservationStatusID;
+    
+    /**
      * The text which will be displayed on welcome boards.
      * 
      * @var string
      */
     public $WelcomeText;
-   
-    
     
     /**
      * 
-     * @param \Opifer\SmartEventManager\Reservations\Model\AddReservationCoding $AddReservationCoding
+     * @param AddReservationCoding $AddReservationCoding
      */
     public function addReservationCoding(AddReservationCoding $AddReservationCoding)
     {
-        if (!is_array($this->AddReservationCodings))
+        if (!is_array($this->AddReservationCodings)) {
             $this->AddReservationCodings = array();
+        }
         
         array_push($this->AddReservationCodings, $AddReservationCoding);
     }
     
     /**
      * 
-     * @param \Opifer\SmartEventManager\Reservations\Model\AddReservationProduct $AddReservationProduct
+     * @param AddReservationProduct $AddReservationProduct
      */
     public function addReservationProduct(AddReservationProduct $AddReservationProduct)
     {
-        if (!is_array($this->AddReservationProducts))
+        if (!is_array($this->AddReservationProducts)) {
             $this->AddReservationProducts = array();
+        }
         
         array_push($this->AddReservationProducts, $AddReservationProduct);
     }
     
     /**
      * 
-     * @param \Opifer\SmartEventManager\Reservations\Model\AddReservationStandardReservation $AddReservationStandardReservation
+     * @param AddReservationStandardReservation $AddReservationStandardReservation
      */
     public function addReservationStandardReservation(AddReservationStandardReservation $AddReservationStandardReservation)
     {
-        if (!is_array($this->AddReservationStandardReservations))
+        if (!is_array($this->AddReservationStandardReservations)) {
             $this->AddReservationStandardReservations = array();
+        }
         
         array_push($this->AddReservationStandardReservations, $AddReservationStandardReservation);
     }
-    
-    
 }
