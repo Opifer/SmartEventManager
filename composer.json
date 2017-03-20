@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "guzzle/guzzle": "~3.9",
+        "guzzle/guzzle": ">=3.8",
         "jms/serializer": ">=0.11 <2.0"
     },
     "autoload": {
