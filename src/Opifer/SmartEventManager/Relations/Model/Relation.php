@@ -37,7 +37,7 @@ class Relation
      * 
      * @var string
      */
-    public $EMailAddress;
+    public $EmailAddress;
     
     /**
      * The first name.
